@@ -1,0 +1,608 @@
+@import 'base';
+@import 'bootstrap';
+@import "compass/css3/box-sizing";
+
+/* ==========================================================================
+  Sitewide styles
+   ========================================================================== */
+
+$accent: #190000;
+$grey: #282828;
+$blue: #0b0d26;
+$em: #f08800;
+$font-color: #a7a7a7;   
+
+html, body {	
+	font-family:'candara', Arial, Sans-Serif;
+    font-size: 16px;
+    line-height: 1.2em;
+	height:100%;
+	min-height:100%;
+	width:100%;
+}
+
+#wrapper{
+	width:100%;
+	height:100%;
+}
+
+#pages{	
+	@extend #wrapper;
+	position:relative;
+	
+	section.page{		
+		overflow:hidden;
+		position:relative;
+	}
+}
+
+#logo{
+	padding:40px 30px 0 30px;
+	position:relative;
+	z-index:1000;
+	cursor: pointer;
+}
+
+@media (max-width: 768px) {
+	#logo{
+		padding-top:50px;
+	}	
+}
+
+header{
+	position:absolute;	
+}
+
+.page{
+	padding:50px 0;
+}
+
+.page>article{
+	max-width:980px;
+	margin:0 auto;
+}
+	
+h2{
+	font-size:20px;
+	font-weight:normal;
+	padding:0 20px;
+	line-height: 1.4em;
+	
+	span{
+		font-family:'aero';
+		font-size:45px;		
+	}
+}
+
+em{
+	color:$em;	
+}
+	
+p{
+	padding:0px 40px;
+}
+
+a{
+	color:$em;
+}
+
+.center{
+	text-align: center;
+}
+
+.orange{
+	color:$em;
+}
+
+/* ==========================================================================
+   Navigation Styles
+   ========================================================================== */
+
+header{
+	width:100%;
+	z-index: 1500;
+	
+	#standard{
+		text-align:right;
+		padding:65px 30px 0 0;
+
+		a{
+			color:white;
+			font-size:22px;
+			padding:0px 5px 2px;
+			margin:0 20px 0 0;
+			text-decoration:none;
+			cursor: pointer;
+		}
+		
+		a:last-child{
+			margin:0;	
+		}
+
+		a.active{
+			border-bottom:3px solid $em;
+		}
+	}
+
+	@media (max-width: 992px) {
+		#standard{
+			text-align:left;
+			padding:20px 0 0 30px;
+
+			a{
+				color:white;
+				font-size:22px;
+				margin:0 20px 0 0;
+				text-decoration:none;
+			}
+			
+			a:last-child{
+				margin:0;	
+			}
+		}
+	}
+
+	#mobile{
+		width:0px;
+		z-index:1000;
+		background-color:$accent;
+		position:fixed;
+		top:0px;
+		left:0px;
+		overflow:hidden;
+		
+		article{
+			text-align:center;
+			display:block;
+			height:inherit;
+			padding:3px 5px;
+		}
+
+		a{
+			color:white;
+			font-size:16px;
+			text-decoration:none;
+			display:block;
+			float:left;
+			clear:left;
+			background:url('../img/navSeperator.png') bottom left repeat-x;
+			padding:5px 0px 5px 15px;
+			text-align:left;
+			width:125px;
+			cursor: pointer;
+		}
+
+		a:first-child{
+			padding-top:10px;
+		}	
+	}
+	
+	@media (max-width: 768px) {
+		#standard{
+			display:none;
+		}
+	}
+}
+
+@media(min-width:769px){
+	header{
+		position: fixed;
+		padding-bottom:20px;
+	}
+}
+
+#navHandle{
+	display:none;
+	
+	span{
+		color:white;
+		font-size:14px;
+	}
+}
+
+@media (max-width: 768px) {
+	#navHandle{
+		width:100%;
+		color:white;
+		background:url('../img/navIcon.png') no-repeat 15px 8px $accent;
+		padding:8px 0 8px 50px;
+		border-bottom:1px solid white;
+		cursor:pointer;
+		display:block;
+		position:fixed;
+		top:0px;
+		z-index:1000;
+		
+		span{
+			color:white;
+			font-size:14px;
+		}
+	}
+}
+   
+
+/* ==========================================================================
+   Homepage Styles
+   ========================================================================== */
+
+#home{
+	width:100%;
+	height:100%;
+
+	#headline{
+		position:absolute;
+		top:50px;
+		height:100%;
+		width:100%;
+		display:table;
+		z-index: 1000;
+
+		article{
+			padding:0 30px;
+			color:white;
+			font-size:20px;
+			font-family:'sansumi';
+			text-align:center;
+			display:table-cell;
+			vertical-align:middle;
+			line-height:1.5em;
+			
+			span.em{
+				color:$em;
+				font-size:25px;
+				font-family:'sansumi-bold';
+			}
+		}
+	}
+
+	#filter{
+		position: absolute; 
+		top: 0px;
+		left: 0px; 
+		min-width: 100%; 
+		min-height: 100%; 
+		width: auto; 
+		height: auto; 
+		z-index: 900; 
+		overflow: hidden;
+		background-image:url("../img/filter.png");
+	}
+
+	video{ 
+		position: absolute; 
+		top: 0px;
+		left: 0px; 
+		min-width: 100%; 
+		min-height: 100%; 
+		width: auto; 
+		height: auto; 
+		z-index: 500; 
+		overflow: hidden;
+	}
+}
+
+
+@media (max-width: 1025px) {
+	#home{
+		background:url('../img/mobileBG.png') no-repeat top center;
+		background-size:cover;
+	}
+}
+
+/* ==========================================================================
+   About Page Styles
+   ========================================================================== */
+
+#about{
+	width:100%;
+	background:$grey;
+	color:$font-color;
+}
+
+/* ==========================================================================
+   Portfolio Page Styles
+   ========================================================================== */
+
+
+#portfolio{
+	width:100%;
+	background:$blue;
+	color:$font-color;
+
+	.project{
+		position: relative;
+		width: 33.3%;	
+		float:left;
+		padding-bottom:50px;
+		cursor: default;
+
+		article{
+			position: absolute;
+			bottom:0px;
+			left:0px;
+			background-color:$grey;
+			overflow: hidden;
+
+			.name{
+				display: block;
+				text-align: center;
+				font-size: 22px;
+				padding-top:12px;
+			}
+
+			a{
+				color:$em;
+				display: block;
+				text-align: center;
+				font-size:20px;
+				padding-top:12px;
+				margin-bottom:10px;
+				background:url('../img/projectHR.png') repeat-x top left;
+			}
+		}
+
+		img{
+			width:100%;
+		}
+	}
+
+	.project:nth-child(odd){
+		article{
+			color:$grey;
+			background-color:$font-color;
+
+			.name{
+				color:$grey;
+			}
+		}
+	}
+
+	@media (max-width: 975px) {
+		.project{
+			width:50%;
+			cursor: pointer;
+		}
+	}
+
+	@media (max-width: 768px){
+		.project{
+			padding-bottom: 0px;
+
+			article{
+				width:200%;
+				position: relative;
+
+				.name{
+					text-align: left;
+					padding:12px 40px 0px;
+				}
+
+				p{
+					padding:0 40px;
+				}
+			}
+		}
+
+		.project:nth-child(even){
+			clear:left;
+		}
+		.project:nth-child(odd){
+			article{
+				left:-100%;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Skills Page Styles
+   ========================================================================== */
+
+#skills{
+	width:100%;
+	background:$grey;
+	color:$font-color;
+
+	article{
+		position: relative;
+
+		#chartWrapper{
+			overflow: hidden;
+
+			.chart{
+				margin:20px 50px 30px 20px;
+				width: 175px;
+				height: 175px;
+				position: relative;
+				font-family: 'sansumi';
+				float:left;
+
+				.value{
+					font-size:40px;
+					position:absolute;
+					top:80px;
+					left: 0px;
+					width:100%;
+					text-align: center;
+				}
+
+				.name{
+					position: absolute;
+					top:180px;
+					left:0px;
+					text-align: center;
+					width: 100%;
+					font-size:18px;
+				}
+
+				.barWrapper{
+					display: none;
+				}
+			}
+
+			@media(max-width: 768px){
+				.chart{
+					width: 100%;
+					height: 20px;
+					margin:20px 0px 0px;
+					padding:20px 40px;
+
+					.barWrapper{
+						background-color:$blue;
+						display: block;
+						width: 100%;
+						height: 20px;
+					}
+
+					.value{
+						font-size: 30px;
+						top:-5px;
+						right:40px;
+						left:auto;
+						width: auto;
+					}
+
+					.name{
+						top:-5px;
+						left:40px;
+						font-size: 20px;
+						width: auto;
+					}
+
+					.barWrapper div{
+						background-color:$em;
+						height: 20px;
+						width:0%;
+					}
+
+					canvas{
+						display:none;
+					}
+				}
+			}	
+		}
+
+		#moreBtn{
+			position:absolute;
+			right:20px;
+			bottom:-25px;
+			color:$em;
+			font-size:20px;
+			cursor: pointer;
+		}
+	}
+}
+
+/* ==========================================================================
+   Contact Me Page Styles
+   ========================================================================== */
+
+#contact{
+	width:100%;
+	background:$blue;
+	color:$font-color;
+
+	#contactFormWrapper{
+		padding-left:40px;
+
+
+		#leftWrapper{
+
+			form{
+				padding-right:40px;
+			}
+
+			input, textarea{
+				background-color:#03040b;
+				width:100%;
+				color:white;
+				border:none;
+				padding:5px 10px;
+			}
+
+			input{
+				height:30px;
+				margin-bottom:10px;
+			}
+
+			textarea{
+				height:200px;
+			}
+
+			p{
+				padding:0px;
+			}
+
+			button{
+				font-size:30px;
+				background-color:$grey;
+				color:$em;
+				padding:20px 30px;
+				margin:10px 0px 20px 0px;
+				border:none;
+				cursor: pointer;
+			}
+
+			button:disabled{
+				display:none;
+			}
+
+			@media(min-width:769px){
+				input.ng-valid.ng-dirty, textarea.ng-valid.ng-dirty{
+					background:URL('../img/validInput.png') no-repeat #03040b;
+					background-position: right 5px top 5px;
+				}
+
+				input.ng-invalid.ng-dirty, textarea.ng-invalid.ng-dirty{
+					background:URL('../img/invalidInput.png') no-repeat #b72a2a;
+					background-position: right 5px top 5px;
+				}
+			}
+
+			@media(max-width:768px){
+
+				input.ng-invalid.ng-dirty, textarea.ng-invalid.ng-dirty{
+					background-color:#b72a2a;
+				}
+			}
+		}
+
+		#rightWrapper{
+
+			h3{
+				color:$em;
+				margin:0px;
+				font-weight: normal;
+			}
+
+			article{
+				margin-bottom:20px;
+
+				a{
+					color:#A7A7A7;
+				}
+			}
+		}
+
+		#mailSuccess, #mailFailure{
+			display:none;
+			padding-top:20px;
+			clear:both;
+
+			h2{
+				margin:0px;
+				position: relative;
+				left: -20px;
+				padding:0px;
+			}
+
+			p{
+				padding:0px;
+			}
+		}
+	}
+}
+
+@import 'jpreloader';
+@import 'fonts';
+@import 'helpers';

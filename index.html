@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html ng-app>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Eric Farley | Web Developer Extraordinaire!</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta property="og:title" content="Eric Farley | Web Developer Extraordinaire!" /> 
+        <meta property="og:image" content="http://www.ericfarley.net/img/logo.png" /> 
+        <meta property="og:description" content="Eric Farley Web Developer and Designer" /> 
+        <meta property="og:url" content="http://www.ericfarley.net">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/main.css?v=1.1">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>        
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <section id="wrapper">
+        	<header class="row" ng-controller="HeadCtrl" ng-cloak>
+                <section class="col-md-6 col-sm-12">
+                    <img src="img/logo.png" alt="Eric Farley" title="Eric Farley" id="logo" class="img-responsive" data-href="home" />
+                </section>
+                <!-- mobile nav handle added via jQuery in main.js -->
+                <section id="navHandle"><span>Navigation</span></section>
+                <nav id="{{nav.id}}" ng-repeat="nav in navs" class="col-md-6 col-sm-12">
+                    <article>
+                        <a ng-repeat="page in pages" data-href="{{page.href}}" ng-class="{active : $first}">{{page.text}}</a>
+                    </article>      
+                </nav>               
+            </header>
+            <section id="pages">
+                <section id="home" class="page">            	
+                    <section class="row" id="headline">
+                        <article>
+                            The web is the <span class="em">&lt;future&gt;</span> and I am thrilled to be its <span class="em">&lt;architect&gt;</span>
+                        </article>
+                    </section>
+                  	<section id="filter"></section>
+                    <section id="videoWrapper">
+                        <video preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" id="video"> 
+                            <source src="video/clouds.mp4"> 
+                            <source src="video/clouds.ogv" type="video/ogv"> 
+                            <source src="video/clouds.webm" type="video/webm"> 
+                        </video>
+                    </section>
+                </section>
+                <section id="skills" class="page" ng-controller="skillsCtrl" ng-cloak>
+                    <article>
+                        <h2><span><em>Skills &amp; Proficiencies</em>  / </span>I'm great at what I do, now you know how great</h2>
+                        <p>I have been developing websites since 2000 and developing them professionally since 2008. Over the years I have learned and worked with many languages, frameworks and different applications. Some of them I have only dabbled in while others I have all but mastered! Below you can look at the languages I have used in my career and just how proficient I have become in the languages, frameworks or applications you're interested in.</p>
+                        <section id="chartWrapper">
+                            <section class="chart" ng-repeat="skill in skills">
+                                <canvas id="{{skill.id}}Chart" width="175" height="175" data-value="{{skill.value}}"></canvas>
+                                <div class="barWrapper"><div id="{{skill.id}}Bar" data-value="{{skill.value}}"></div></div>
+                                <span class="value">{{skill.value}}</span>
+                                <span class="name">{{skill.name}}</span>
+                            </section>
+                        </section>
+                        <article id="moreBtn">
+                            <span>View More</span>
+                        </article>
+                    </article>
+                </section>
+                <section id="portfolio" class="page" ng-controller="portfolioCtrl">
+                    <article>
+                        <h2><span><em>Portfolio</em>  / </span>A taste of the work I've done</h2>
+                        <p>During my time working with web development firms I have developed over 100 websites. I've developed high traffic sites for Microsoft, fortune 500 ecommerce sites, small businesses, local municipalities and mom and pop shops, so I won't bore you with all of them. Instead below you will find a few of my favorite projects I have worked on.</p>
+                        <p class="center orange">Click or hover over images for project details</p>
+                    </article>
+                    <section class="project" ng-repeat="project in projects" data-id="{{$index}}">
+                        <img src="img/{{project.src}}.png" title="{{project.title}}" />
+                        <article>
+                            <span class="name">{{project.name}}</span>
+                            <p>{{project.desc}}</p>
+                            <a href="http://www.{{project.url}}" target="_blank" title="{{project.url}}">View Site</a>
+                        </article>
+                    </section>
+                </section>
+                <section id="about" class="page">
+                    <article>
+                        <h2><span><em>About Me</em>  / </span>What makes me awesome</h2>
+                        <p>During high school I began taking an interest in computer programming and by the time I graduated I had mastered HTML, CSS and Photoshop. One of my teachers who had been impressed by these skills recommended me to the town I lived in to design and develop their website. This site began my professional experience and taught me a lot of valuable lessons, but most importantly it got me interested in pursuing web development as a career. Over the next few years I continued to expand my knowledge gaining my degree in web development and a lot more experience along the way. I graduated from college with a 3.8 GPA and was honored twice with a prestigious placement on the Presidents list for the campus.</p>
+                        <p>Shortly after graduation from college I was hired by a small development firm where I spent my first two years of professional development building websites using a custom developed CMS. In addition to that during my time there I was one of the primary developers behind delivering a robust C# application the prepped students around the country for the Microsoft Word, Excel and PowerPoint certifications. From there I decided to move out west to Portland OR where I spent the next two years serving as the lead developer for a startup event planner called Dynamic Events. While with Dynamic I furthered my development skill as well as started gaining experience with managing and mentoring another developer.<p>
+                        <p>After leaving Dynamic Events I moved onto join the team of developers working to deliver a modern responsive account management tool for Umpqua Bank. The account management tool is used by Umpqua's ever growing customer base as a means to manage their account, view transaction history, transfer funds and more. As a member of the team I quickly established myself as an experienced developer and was responsible to mentoring and assisting our junior developers on the team.<p>
+                        <p>Today I find myself working for another start up called Enigma Health who seeks to provide help to millions of individuals suffering from health related anxiety. My role on the team is to provide technical leadership, training and support for the teams within the company. I am also responsible for building and managing a technical team that will be responsible for the future development of Enigma continuing growth.</p>
+                        <p>During all of this my skills have grown dramatically including Project management, Application architecture, Management, HTML5, CSS3, JQuery, Javascript, Angular.js, Sass, Bootstrap, PHP, ASP, SQL, C#, XML, XML, Visual Basic, Java, Drupal 7 and more. I have developed and deployed email blasts sent to lists of nearly 2 million subscribers, mastered Microsoft Office, gained an excellent knowledge of CMS systems and MV* Frameworks and gained hundreds of hours of experience with SQL Server, Dreamweaver, Photoshop, Visual Studio, Campaign enterprise, MS Word/Excel/Powerpoint/Access, customer support and network administration.</p>
+                </section>
+                <section id="contact" class="page" ng-controller="contactForm">
+                    <article>
+                        <h2><span><em>Contact Me</em>  / </span>Want to know more? Let's chat!</h2>
+                        <p>You like what you've seen so far and you have some additional questions or would you like to contact me about a project you have? Well then don't hesitate to send me a message! You can either use this form or if you would rather just email me directly, just send me a mail to the address below. If you have something that is just too exciting to wait for me to respond than feel free to give me a call and we can chat right now!</p>
+                        <section class="row" id="contactFormWrapper">
+                            <section id="leftWrapper" class="col-xs-12 col-sm-8">
+                                <form novalidate id="contactForm" name="contactForm">
+                                    <input type="text" ng-model="name" required placeholder="Full Name*" /><br />
+                                    <input type="email" ng-model="email" placeholder="Email Address*" required /><br />
+                                    <input type="text" ng-model="phoneNumber" ng-pattern="/^\d{10,11}x?\d*$/i" placeholder="Phone Number" /><br />                     
+                                    <input type="url" ng-model="website" placeholder="Website (include http://)" /><br />
+                                    <textarea ng-model="message" placeholder="Your Message*" required></textarea>
+                                    <p>Fields marked with * are required</p>
+                                    <button ng-click="sendEmail(contactForm)" ng-disabled="!contactForm.$valid">Submit</button>
+                                </form>
+                            </section>
+                            <section id="rightWrapper" class="vcard col-xs-12 col-sm-4">
+                                <h3 class="fn">Eric Farley</h3>
+                                <article class="adr">
+                                    <span class="street-address">53045 NW Manor Dr</span><br />
+                                    <span class="locality">Scappoose</span> <span class="region">OR</span>, <span class="postal-code">97056</span>
+                                </article>
+                                <article>
+                                    <h3>Email:</h3>
+                                    <a href="mailto:eric@ericfarley.net" class="email">eric@ericfarley.net</a><br />
+                                </article>
+                                <article>
+                                    <h3>Phone:</h3>
+                                    <span class="tel">(607) 731-7789</span>
+                                </article>
+                            </section>
+                            <section>
+                                <article id="mailSuccess">
+                                    <h2><span><em>Thank You</em></span></h2>
+                                    <p>I have recieved your message and will respond to it as soon as I can. Have an amazing day!</p>
+                                </article>
+                                <article id="mailFailure">
+                                    <h2><span><em>I'm Sorry</em></span></h2>
+                                    <p>It looks like something went wrong when I attempted to send your message. Please verify that you have entered a valid email address and try again. If you are still unsuccesful feel free to email me directly at <a href="mailto:ericfarley.net">eric@ericfarley.net</a>.</p>
+                                </article>
+                            </section>
+                        </section>
+                    </article>
+                </section>
+            </section>
+        </section>
+
+        <!-- This section is for Splash Screen -->
+        <section id="jSplash">
+            <img src="img/icon.png" />
+            <article>Loading the Awesomeness<span id="loading"></span></article>
+        </section>
+        <!-- End of Splash Screen -->
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/angular.min.js"><\/script>')</script> 
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/jpreloader.min.js"></script>    
+        <script src="js/vendor/jquery.inviewport.min.js"></script>
+        <script src="js/vendor/chart.min.js"></script>
+        <script src="js/vendor/jquery.scrollTo-1.4.3.1-min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.min.js"></script>
+        <script src="js/controllers.js?v=1.1"></script>
+
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-4470180-3');ga('send','pageview');
+        </script>
+    </body>
+</html>
