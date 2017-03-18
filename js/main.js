@@ -322,7 +322,7 @@ var skill = function Skill(){
 							value: chart.data('value'),
 							color: "#f08800"
 						}, {
-							value: (100 - chart.data('value')),
+							value: (10 - chart.data('value')),
 							color: "#080a1c"
 						}], {
 							segmentShowStroke: false,

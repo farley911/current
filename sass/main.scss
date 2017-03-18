@@ -418,12 +418,19 @@ header{
 				float:left;
 
 				.value{
-					font-size:40px;
+					font-size:35px;
 					position:absolute;
-					top:80px;
-					left: 0px;
+					top:70px;
+					left: 7px;
 					width:100%;
 					text-align: center;
+				}
+
+				.subscript{
+					font-size: 15px;
+					left: -15px;
+					position: relative;
+					top: 10px;
 				}
 
 				.name{

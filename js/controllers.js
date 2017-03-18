@@ -20,18 +20,18 @@ function portfolioCtrl($scope){
 	//Creates array for projects
 	$scope.projects = [
 		{
+			src: "nike",
+			title: "Nike",
+			name: "Nike",
+			desc: "Nike provided one of the most challenging and rewarding projects in my career. I was one of two developers responsible for delivering the front end of an advanced 3D design tool that allowed designers to open various 3D models of shoes and using a collection of palettes and tool panels apply and manipulate color, material, prints, patterns and graphics to the individual parts of the shoe, export PDF documentation to send off to product line managers and factories for approval and production, calculate color usage from primary though quaternary colors to display on packaging, and much more.",
+			url: "nike.com"
+		},
+		{
 			src: "enigma",
 			title: "Enigma Health",
 			name: "Enigma Health",
 			desc: "Enigma Health brought me onboard as their senior developer to help provide the technical leadership mentoring and direction to help them develop the tools, teams and processes to deliver their treatment program to patients. In addition I was responsible for developing and maintaining a number of web sites to maintain Enigma Healths online presence. These tools were built using either Angular.js or Drupal 7 depending on the needs of the project.",
 			url: "enigmahealth.com"
-		},
-		{
-			src: "wqq",
-			title: "Wedding Quick Quote",
-			name: "Wedding Quick Quote",
-			desc: "The team behind wedding quick quote was looking to update their existing system so that it would be a modern responsive site where users could get a wedding quote from any device. I received their current source code and after careful review I identified the updates that would be needed to provide a facelift to their existing system without requiring a complete rebuild of the backend services.",
-			url: "weddingquickquote.com"
 		},
 		{
 			src: "ub",
@@ -65,28 +65,31 @@ function portfolioCtrl($scope){
 
 function skillsCtrl($scope){
 	$scope.skills = [
-		{name: "HTML5", id: "html", value: "90"},
-		{name: "CSS3", id: "css", value: "90"},
-		{name: "JavaScript", id: "js", value: "90"},
-		{name: "Sass", id: "sass", value: "90"},
-		{name: "jQuery", id: "jquery", value: "85"},
-		{name: "Ember.js", id: "ember", value: "80"},
-		{name: "MV*", id: "mvc", value: "80"},
-		{name: "Angular.js", id: "angularjs", value: "75"},
-		{name: "Bootstrap", id: "boosstrap", value: "75"},
-		{name: "PHP", id: "php", value: "70"},
-		{name: "SQL", id: "sql", value: "65"},
-		{name: ".NET", id: "dotNet", value: "50"},
-		{name: "AJAX", id: "ajax", value: "90"},
-		{name: "Adobe CS", id: "adobe", value: "90"},		
-		{name: "Responsive Design", id: "responsiveDesign", value: "85"},
-		{name: "ASP", id: "asp", value: "80"},
-		{name: "Email Blasts", id: "email", value: "70"},
-		{name: "Json", id: "json", value: "80"},
-		{name: "Web Design", id: "design", value: "80"},
-		{name: "XML", id: "xml", value: "70"},
-		{name: "C#", id: "csharp", value: "60"},
-		{name: "Cake PHP", id: "cakephp", value: "50"}
+		{name: "HTML5", id: "html", value: "9"},
+		{name: "CSS3", id: "css", value: "9"},
+		{name: "JavaScript", id: "js", value: "9"},
+		{name: "Sass", id: "sass", value: "9"},
+		{name: "Angular.js (2.x)", id: "angularjs2", value: "8.5"},
+		{name: "MV*", id: "mvc", value: "8.5"},
+		{name: "jQuery", id: "jquery", value: "8.5"},
+		{name: "TypeScript", id: "typescript", value: "8.5"},
+		{name: "Angular.js (1.x)", id: "angularjs1", value: "7.5"},
+		{name: "Bootstrap", id: "boosstrap", value: "7.5"},
+		{name: "Ember.js", id: "ember", value: "7"},
+		{name: "ThreeJS", id: "webgl", value: "6"},
+		{name: "PHP", id: "php", value: "7"},
+		{name: "SQL", id: "sql", value: "6.5"},
+		{name: ".NET", id: "dotNet", value: "5"},
+		{name: "AJAX", id: "ajax", value: "9"},
+		{name: "Adobe CS", id: "adobe", value: "9"},		
+		{name: "Responsive Design", id: "responsiveDesign", value: "8.5"},
+		{name: "ASP", id: "asp", value: "8"},
+		{name: "Email Blasts", id: "email", value: "7"},
+		{name: "Json", id: "json", value: "8"},
+		{name: "Web Design", id: "design", value: "8"},
+		{name: "XML", id: "xml", value: "7"},
+		{name: "C#", id: "csharp", value: "6"},
+		{name: "Cake PHP", id: "cakephp", value: "5"}
 	];
 }
 

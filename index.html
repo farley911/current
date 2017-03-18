@@ -17,7 +17,7 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="css/main.css?v=1.1">
+        <link rel="stylesheet" href="css/main.css?v=1.2">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>        
     </head>
     <body>
@@ -57,13 +57,13 @@
                 </section>
                 <section id="skills" class="page" ng-controller="skillsCtrl" ng-cloak>
                     <article>
-                        <h2><span><em>Skills &amp; Proficiencies</em>  / </span>I'm great at what I do, now you know how great</h2>
-                        <p>I have been developing websites since 2000 and developing them professionally since 2008. Over the years I have learned and worked with many languages, frameworks and different applications. Some of them I have only dabbled in while others I have all but mastered! Below you can look at the languages I have used in my career and just how proficient I have become in the languages, frameworks or applications you're interested in.</p>
+                        <h2><span><em>Skills &amp; Proficiencies</em>  / </span>I'm excellent at what I do, here's how excellent</h2>
+                        <p>I have been developing websites since 2000 and developing them professionally since 2008. Over the years I have learned and worked with many languages, frameworks and different applications. Some of them I have only dabbled in while others I have all but mastered. Below you can look at the languages I have used in my career and just how proficient I have become in the languages, frameworks or applications you're interested in.</p>
                         <section id="chartWrapper">
                             <section class="chart" ng-repeat="skill in skills">
                                 <canvas id="{{skill.id}}Chart" width="175" height="175" data-value="{{skill.value}}"></canvas>
                                 <div class="barWrapper"><div id="{{skill.id}}Bar" data-value="{{skill.value}}"></div></div>
-                                <span class="value">{{skill.value}}</span>
+                                <span class="value">{{skill.value}} <span class="subscript">/10</span></span>
                                 <span class="name">{{skill.name}}</span>
                             </section>
                         </section>
@@ -75,7 +75,7 @@
                 <section id="portfolio" class="page" ng-controller="portfolioCtrl">
                     <article>
                         <h2><span><em>Portfolio</em>  / </span>A taste of the work I've done</h2>
-                        <p>During my time working with web development firms I have developed over 100 websites. I've developed high traffic sites for Microsoft, fortune 500 ecommerce sites, small businesses, local municipalities and mom and pop shops, so I won't bore you with all of them. Instead below you will find a few of my favorite projects I have worked on.</p>
+                        <p>During my time working with web development firms I have developed dozens of websites and web applications. I've developed highly function web apps, high traffic sites for Microsoft conferences, fortune 500 ecommerce sites, small businesses, local municipalities and mom and pop shops, so I won't bore you with all of them. Instead below you will find six of my favorite projects I have worked on.</p>
                         <p class="center orange">Click or hover over images for project details</p>
                     </article>
                     <section class="project" ng-repeat="project in projects" data-id="{{$index}}">
@@ -93,13 +93,14 @@
                         <p>During high school I began taking an interest in computer programming and by the time I graduated I had mastered HTML, CSS and Photoshop. One of my teachers who had been impressed by these skills recommended me to the town I lived in to design and develop their website. This site began my professional experience and taught me a lot of valuable lessons, but most importantly it got me interested in pursuing web development as a career. Over the next few years I continued to expand my knowledge gaining my degree in web development and a lot more experience along the way. I graduated from college with a 3.8 GPA and was honored twice with a prestigious placement on the Presidents list for the campus.</p>
                         <p>Shortly after graduation from college I was hired by a small development firm where I spent my first two years of professional development building websites using a custom developed CMS. In addition to that during my time there I was one of the primary developers behind delivering a robust C# application the prepped students around the country for the Microsoft Word, Excel and PowerPoint certifications. From there I decided to move out west to Portland OR where I spent the next two years serving as the lead developer for a startup event planner called Dynamic Events. While with Dynamic I furthered my development skill as well as started gaining experience with managing and mentoring another developer.<p>
                         <p>After leaving Dynamic Events I moved onto join the team of developers working to deliver a modern responsive account management tool for Umpqua Bank. The account management tool is used by Umpqua's ever growing customer base as a means to manage their account, view transaction history, transfer funds and more. As a member of the team I quickly established myself as an experienced developer and was responsible to mentoring and assisting our junior developers on the team.<p>
-                        <p>Today I find myself working for another start up called Enigma Health who seeks to provide help to millions of individuals suffering from health related anxiety. My role on the team is to provide technical leadership, training and support for the teams within the company. I am also responsible for building and managing a technical team that will be responsible for the future development of Enigma continuing growth.</p>
-                        <p>During all of this my skills have grown dramatically including Project management, Application architecture, Management, HTML5, CSS3, JQuery, Javascript, Angular.js, Sass, Bootstrap, PHP, ASP, SQL, C#, XML, XML, Visual Basic, Java, Drupal 7 and more. I have developed and deployed email blasts sent to lists of nearly 2 million subscribers, mastered Microsoft Office, gained an excellent knowledge of CMS systems and MV* Frameworks and gained hundreds of hours of experience with SQL Server, Dreamweaver, Photoshop, Visual Studio, Campaign enterprise, MS Word/Excel/Powerpoint/Access, customer support and network administration.</p>
+                        <p>After that I found myself working for another start up called Enigma Health who seeks to provide help to millions of individuals suffering from health related anxiety. My role on the team is to provide technical leadership, training and support for the teams within the company. I am also responsible for building and managing a technical team that will be responsible for the future development of Enigma continuing growth.</p>
+                        <p>Currently I work for Nike delivering the front end of an advanced 3D design tool that provides Nike designers with the ability to apply color and material combinations to existing shoe models. I was responsible for planning and implementing the architecture for the applications front end using Angular 2, unit testing and coverage using Karma/Jasmine. This application was one of the most challenging and rewarding apps that I have ever developed, while I could talk about it for pages I’ll try to be brief, but please ask to hear more during the interview! We often joked that we were building the Photoshop of 3D shoe design and that isn’t too far from reality. The application allowed designers to open various 3D models of shoes and using a collection of palettes and tool panels apply and manipulate color and material to the individual parts of the shoe, export PDF documentation to send off to product line managers and factories for approval and production, calculate color usage from primary though quaternary colors displayed on packaging, and much more. All of this was connected to a backend aggregator that handled and routed requests from our application though various Nike data services, AWS and Lamda functions returning JSON to the application.</p>
+                        <p>During all of this my skills have grown dramatically including Project management, Application architecture, Management, HTML5, CSS3, JQuery, Javascript, Angular.js (1 and 2), Sass, TypeScript, Bootstrap, PHP, ASP, SQL, C#, XML, XML, Visual Basic, Java, Drupal 7 and more. I have developed and deployed email blasts sent to lists of nearly 2 million subscribers, mastered Microsoft Office, gained an excellent knowledge of CMS systems and MV* Frameworks and gained hundreds of hours of experience with SQL Server, Dreamweaver, Photoshop, Visual Studio, Campaign enterprise, MS Word/Excel/Powerpoint/Access, customer support and network administration.</p>
                 </section>
                 <section id="contact" class="page" ng-controller="contactForm">
                     <article>
                         <h2><span><em>Contact Me</em>  / </span>Want to know more? Let's chat!</h2>
-                        <p>You like what you've seen so far and you have some additional questions or would you like to contact me about a project you have? Well then don't hesitate to send me a message! You can either use this form or if you would rather just email me directly, just send me a mail to the address below. If you have something that is just too exciting to wait for me to respond than feel free to give me a call and we can chat right now!</p>
+                        <p>If you like what you've seen so far and you have some additional questions or would like to contact me about a project you have then here's the place. Don't hesitate to send me a message! You can either use this form or if you'd rather just email me directly.</p>
                         <section class="row" id="contactFormWrapper">
                             <section id="leftWrapper" class="col-xs-12 col-sm-8">
                                 <form novalidate id="contactForm" name="contactForm">
@@ -115,8 +116,8 @@
                             <section id="rightWrapper" class="vcard col-xs-12 col-sm-4">
                                 <h3 class="fn">Eric Farley</h3>
                                 <article class="adr">
-                                    <span class="street-address">53045 NW Manor Dr</span><br />
-                                    <span class="locality">Scappoose</span> <span class="region">OR</span>, <span class="postal-code">97056</span>
+                                    <span class="street-address">54 SW 206th ave.</span><br />
+                                    <span class="locality">Beaverton</span> <span class="region">OR</span>, <span class="postal-code">97006</span>
                                 </article>
                                 <article>
                                     <h3>Email:</h3>
@@ -162,8 +163,8 @@
         <script src="js/vendor/chart.min.js"></script>
         <script src="js/vendor/jquery.scrollTo-1.4.3.1-min.js"></script>
         <script src="js/plugins.js"></script>
-        <script src="js/main.min.js"></script>
-        <script src="js/controllers.js?v=1.1"></script>
+        <script src="js/main.min.js?v=1.0"></script>
+        <script src="js/controllers.js?v=1.2"></script>
 
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
